@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="qrcode1.css" />
-		<link rel="icon" type="image/svg+xml" href="./assets/logo.png" />
-		<title>QR Code Generator</title>
-		<meta name="title" content="QR Code Generator " />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>QR Code Generator</title>
 	
-</head>
-	<body>
-		<div class="qr-container">
-			<div class="qr-heading">QR Code Generator</div>
-			<section class="user-input">
-				<input
-					type="text"
-					name="input_text"
-					id="input_text"
-					class="qr-input"
-					placeholder="Enter text or URL"
-					autocomplete="off" />
-				<button class="qr-button" type="submit">GENERATE</button>
-			</section>
-			<div class="qr-code" style="display: none"></div>
-			<a id="downloadLink" class="qr-download" style="display: none" download="qrcode.png"
-				>Download QR Code</a
-			>
-		</div>
-		<button id="About"><img src="./assets/avatar.png" alt="" /></button>
+	<!-- Meta SEO -->
+	<meta name="description" content="Generate QR codes instantly from any text or URL. Simple, fast, and free." />
+	<meta name="keywords" content="QR code, QR generator, QR code online, make QR code" />
+	<meta name="author" content="Your Name" />
 
-		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://unpkg.com/tippy.js@6"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-		<script src="qrcode1.js"></script>
-	</body>
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="./assets/logo.png" />
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./qrcode1.css" />
+</head>
+<body>
+	<div class="qr-container">
+		<h1 class="qr-heading">QR Code Generator</h1>
+
+		<section class="user-input">
+			<input
+				type="text"
+				name="input_text"
+				id="input_text"
+				class="qr-input"
+				placeholder="Enter text or URL"
+				autocomplete="off"
+			/>
+			<button class="qr-button" type="button" id="generateBtn">GENERATE</button>
+		</section>
+
+		<div class="qr-code" id="qrCodeContainer" style="display: none;"></div>
+
+		<a id="downloadLink" class="qr-download" style="display: none;" download="qrcode.png">
+			Download QR Code
+		</a>
+	</div>
+
+	<!-- About Button -->
+	<button id="About" title="About this project">
+		<img src="./assets/avatar.png" alt="About icon" />
+	</button>
+
+	<!-- JS Libraries -->
+	<script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+	<!-- Main JS -->
+	<script src="./qrcode1.js"></script>
+</body>
 </html>
